@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer .container {
+  display: flex;
+  height: auto;
+}
+
+/* # UTILS */
+
+.container {
+  display: flex;
+  height: 600px;
+}
+
+.player {
+  background-color: hsl(0deg 0% 15.69%);
+  height: 100px;
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SMALL COLUMN */
+.small-col {
+  background-color: hsl(0deg 0% 0%);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: flex-start;
+}
+
+.logo-spotify {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  width: 100px;
+  justify-content: center;
+}
+
+.small-col > * {
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: 10px;
+}
+
+.logo-scritta {
+  display: block;
+  margin-bottom: 10px;
+  max-width: 130px;
+}
+
+.logo {
+  display: none;
+}
+
+.list-icons {
+  color: white;
+  text-align: center;
+  margin-left: 7px;
+}
+
+.icon {
+  width: 16px;
+  margin-bottom: 10px;
+}
+
+.scritta-icon {
+  padding: 3px 0;
+  color: gray;
+  font-size: 13px;
+}
+
+.small-col li {
+  display: flex;
+  gap: 6px;
+  margin-left: 6px;
+}
+
+.profile {
+  width: 42px;
+}
+
+.cerchio {
+  width: 25px;
+  height: 25px;
+  background-color: hsl(0deg 0% 50.2%);
+  border-radius: 53%;
+  overflow: hidden;
+}
+
+.download {
+  margin-top: auto;
+  width: 19px;
+}
+
+.big-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.crea-playlist {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  margin-left: 7px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-playlist {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.installer {
+  display: flex;
+  flex-direction: column;
+  column-gap: 6px;
+  margin-bottom: 3px;
+  margin-left: 7px;
+}
+
+.bar {
+  background-color: gray;
+  height: 0.5px;
+  margin-right: -51px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.bottom-small-col {
+  margin-top: auto;
+}
+
+.scritte {
+  color: white;
+}
+
+.utente {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 6px;
+}
+
+.utente .scritte {
+  font-size: 13px;
+}
+
+/**************************************************
+**                   BIG-COL                   **
+**************************************************/
+
+.head-big-col {
+  background-color: hsl(217.5deg 25% 6.27%);
+  max-width: 100%;
+  height: 90px;
+}
+
+.main-big-col {
+  display: flex;
+  background-color: #1c1c2c;
+  flex: 1 1 100%;
+}
+
+/**************************************************
+**                   FOOTER                      **
+**************************************************/
+
+.progress-bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.progress-bar-container > .progress-bar {
+  flex-grow: 1;
+  /* max-width: 300px; */
+  min-width: 100px;
+  height: 4px;
+  background-color: gray;
+  border-radius: 2px;
+}
+
+.progress-bar-container > .progress-bar > .progress {
+  width: 18%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2%;
+  position: relative;
+}
+
+.progress-bar-container:hover > .progress-bar > .progress::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.player > .current-song > img {
+  width: 40px;
+  margin-left: 9px;
+}
+
+.current-song {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.current-song .scritte {
+  font-size: 13px;
+}
+
+.current-song .scritta-icon {
+  display: flex;
+  vertical-align: baseline;
+  font-size: 11px;
+}
+/**************************************************
+**             MEDIA PHONE - SM                  **
+**************************************************/
+
+/* @media all and (min-width: 576px) {
+  .logo-scritta {
+
+  }
+
+  .logo {
+    display: block;
+    width: 30px;
+  }
+
+  .small-col {
+
+  }
+
+  .scritta-icon {
+    display: none;
+  }
+
+  .small-col > * {
+    
+  }
+
+  .crea-playlist {
+
+  }
+
+  .playlists {
+ 
+  }
+
+  .utente .scritte {
+    
+  }
+
+  .bar {
+  
+  }
+
+  .installer {
+
+  }
+} */
+
+/**************************************************
+**             MEDIA  TABLET - MD                  **
+**************************************************/
+
+@media all and (min-width: 768px) {
+}
+
+/**************************************************
+**             MEDIA DESKTOP - LG                  **
+**************************************************/
+
+@media all and (min-width: 992px) {
+}
