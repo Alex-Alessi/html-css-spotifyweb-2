@@ -251,14 +251,29 @@ footer .container {
   gap: 10px;
 }
 
+.title-name-currentsong {
+  width: 89px;
+  display: flex;
+  flex-direction: column;
+}
+
 .current-song .scritte {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .current-song .scritta-icon {
   display: flex;
-  vertical-align: baseline;
-  font-size: 11px;
+  align-items: baseline;
+  font-size: 10px;
+}
+
+.icons-left {
+  display: flex;
+}
+
+.fa-regular {
+  color: grey;
+  margin: 4px;
 }
 /**************************************************
 **             MEDIA PHONE - SM                  **
